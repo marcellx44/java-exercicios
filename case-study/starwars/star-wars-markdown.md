@@ -57,5 +57,5 @@ classDiagram
     Weapon <|-- Blast
     Weapon <|-- Saber
     
-    Jedi "1" o-- "0..*" Weapon
-    Sith "1" o-- "0..*" Weapon
+    Jedi "1" -- "0..*" Weapon : -weapons ArrayList < Weapon>
+    Sith "1" -- "0..*" Weapon : -weapons ArrayList < Weapon>
