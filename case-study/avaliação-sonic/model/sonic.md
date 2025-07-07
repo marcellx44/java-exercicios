@@ -60,9 +60,11 @@ classDiagram
     Character <|-- Sonic
     Character <|-- Tails
     Character <|-- Monkey
+    Character <|-- Object
+    Character "*"--"1" Environment : -characters ArrayList < Character>
     
-    Character "*" --* "1" Direction : uses
+    Character "*" -- "1" Direction 
     
-    Environment "1" o-- "*" Object : objects
+    Environment "1" -- "*" Object : -objects ArrayList < Object>
     
-    Object ..> TipoObjeto : uses
+    Object -- TipoObjeto 
